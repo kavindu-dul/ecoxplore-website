@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoXplore Adventures | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href='#main'>Skip to content</a>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">EcoXplore Adventures</div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Nature, Leave Only Footprints</h1>
+                <p>Eco-friendly adventures that protect the planet and thrill your soul.</p>
+                <a href="tours.html" class="btn">Explore Tours</a>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="container">
+            <h2>Welcome to EcoXplore Adventures</h2>
+            <p>We are a small team of passionate naturalists and certified guides offering low-impact hiking, camping, cycling and rafting experiences in some of the world's most stunning landscapes. Every trip supports local conservation projects and communities.</p>
+        </section>
+
+        <!-- FEATURED TOURS -->
+        <section class="container">
+            <h2>Featured Adventures</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Mountain_Hiking_Adventure.png" alt="Mountain hiking trail">
+                    <div class="card-body">
+                        <h3>Mountain Hiking Adventure</h3>
+                        <p>3-day trek through untouched alpine forests with professional eco-guides.</p>
+                        <div class="price">From LKR 95,000</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Forest_Camping_Experience.jpg" alt="Tents under stars">
+                    <div class="card-body">
+                        <h3>Forest Camping Experience</h3>
+                        <p>Overnight stay in solar-powered campsites, night safari &amp; bush-craft lessons.</p>
+                        <div class="price">From LKR 45,000</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Eco_Cycling_Tour.jpg" alt="Cyclist on dirt trail">
+                    <div class="card-body">
+                        <h3>Eco Cycling Tour</h3>
+                        <p>Full-day electric-bike tour visiting local organic farms and hidden waterfalls.</p>
+                        <div class="price">From LKR 30,000</div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:2rem"><a href="tours.html" class="btn btn-outline">View All Tours</a></p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> EcoXplore Adventures &middot; earth@ecoxplore.com &middot; +94 70 132 2778</p>
+            <div class="socials" aria-label="Social media links">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

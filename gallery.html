@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | EcoXplore Adventures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* simple lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.8);
+            display: none;
+            place-items: center;
+            z-index: 200;
+        }
+
+            .lightbox img {
+                max-width: 90vw;
+                max-height: 85vh;
+                border-radius: var(--radius);
+            }
+
+            .lightbox.open {
+                display: grid
+            }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href='#main'>Skip to content</a>
+    <header>
+        <nav class="navbar container">
+            <div class="logo">EcoXplore Adventures</div>
+            <div class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <section>
+            <h1>Photo Gallery</h1>
+            <p>A glimpse into the amazing places and smiles we share. (Click any image to enlarge)</p> <br />
+
+            <div class="gallery-grid">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Sunrise_over_mountain_ridge.jpg" alt="Sunrise over mountain ridge">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Group_crossing_suspension_bridge.jpg" alt="Group crossing suspension bridge">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Close-up_of_exotic_bird.jpg" alt="Close-up of exotic bird">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Happy_campers_cooking_on_biogas_stove.jpg" alt="Happy campers cooking on biogas stove">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Misty_waterfall.jpg" alt="Misty waterfall">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Rafting_team_paddling_through.jpg" alt="Rafting team paddling through rapid">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Star-filled_sky_above_tents.jpg" alt="Star-filled sky above tents">
+                <img src="C:\Users\rkavi\OneDrive\Desktop\ecoxplore-website\Images\IMG_Cyclist_resting_beside_lake.jpg" alt="Cyclist resting beside lake">
+            </div>
+        </section>
+    </main>
+
+    <!-- simple lightbox -->
+    <div class="lightbox" id="lightbox" aria-label="Image enlarged view" role="dialog">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> EcoXplore Adventures &middot; earth@ecoxplore.com &middot; +94 70 132 2778</p>
+            <div class="socials">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();
+
+    /* basic lightbox */
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery-grid img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        lbImg.src=img.src;
+        lbImg.alt=img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+    lightbox.addEventListener('click',()=>lightbox.classList.remove('open'));</script>
+</body>
+</html>
